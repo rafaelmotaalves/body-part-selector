@@ -1,3 +1,4 @@
-import Button from "./components/Button";
+import SimpleBodySelector, { SimpleBodySelectorProps } from "./components/SimpleBodySelector";
 
-export { Button };
+export type { SimpleBodySelectorProps }
+export { SimpleBodySelector }
