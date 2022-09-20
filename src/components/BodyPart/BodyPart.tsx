@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+import React, { useState } from 'react'
+import styled from 'styled-components'
 
-const DEFAULT_COLOR = 'black';
-const DEFAULT_SELECTED_COLOR = 'red';
+const DEFAULT_COLOR = 'black'
+const DEFAULT_SELECTED_COLOR = 'red'
 
 const StyledPath = styled.path<{
-  selected: boolean,
-  color: string,
+  selected: boolean
+  color: string
   selectedColor: string
 }>`
-  fill: ${p => p.selected ? p.selectedColor:  p.color };
+  fill: ${p => p.selected ? p.selectedColor : p.color};
   cursor: pointer;
   transition: all .2s ease-in-out;
 
@@ -18,16 +18,16 @@ const StyledPath = styled.path<{
   }
 `
 export interface BodyPartProps {
-  title: string,
-  d: string,
-  id: string,
-  value: boolean,
-  color?: string,
-  selectedColor?: string,
+  title: string
+  d: string
+  id: string
+  value: boolean
+  color?: string
+  selectedColor?: string
   onChange?: (
     id: string,
     value: boolean,
-  ) => void;
+  ) => void
 }
 
 const BodyPart = ({
@@ -38,13 +38,13 @@ const BodyPart = ({
   color = DEFAULT_COLOR,
   selectedColor = DEFAULT_SELECTED_COLOR,
   onChange
-}: BodyPartProps) => {
-  const [isSelected, setSelected] = useState(Boolean(value));
+}: BodyPartProps): JSX.Element => {
+  const [isSelected, setSelected] = useState(Boolean(value))
 
-  const toggleSelected = () => {
-    const value = !isSelected;
-    onChange ? onChange(id, value) : null;
-    setSelected(value);
+  const toggleSelected = (): void => {
+    const value = !isSelected
+    if (onChange != null) onChange(id, value)
+    setSelected(value)
   }
 
   return <StyledPath
@@ -57,4 +57,4 @@ const BodyPart = ({
     <title>{title}</title>
   </StyledPath>
 }
-export default BodyPart;
+export default BodyPart

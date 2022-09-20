@@ -1,3 +1,3 @@
-import BodyWrapper from "./BodyWrapper";
+import BodyWrapper from './BodyWrapper'
 
-export default BodyWrapper;
+export default BodyWrapper

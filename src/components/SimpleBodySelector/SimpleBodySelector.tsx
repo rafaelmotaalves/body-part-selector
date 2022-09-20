@@ -1,24 +1,24 @@
-import React from 'react';
-import BodyWrapper from "../BodyWrapper"
-import { BodyTypeProps } from "../../types";
+import React from 'react'
+import BodyWrapper from '../BodyWrapper'
+import { BodyTypeProps } from '../../types'
 
-import simpleBodyParts from "../../assets/simple-body.json";
+import simpleBodyParts from '../../assets/simple-body.json'
 
 export interface SimpleBodySelectorData {
-  head?: boolean,
-  leftArm?: boolean,
-  rightArm?: boolean,
-  torso?: boolean,
-  leftLeg?: boolean,
+  head?: boolean
+  leftArm?: boolean
+  rightArm?: boolean
+  torso?: boolean
+  leftLeg?: boolean
   rightLeg?: boolean
 }
 
-export type SimpleBodySelectorProps = BodyTypeProps<SimpleBodySelectorData>;
+export type SimpleBodySelectorProps = BodyTypeProps<SimpleBodySelectorData>
 
-const SimpleBodySelector = (props: SimpleBodySelectorProps) =>
+const SimpleBodySelector = (props: SimpleBodySelectorProps): JSX.Element =>
   <BodyWrapper
     bodyParts={simpleBodyParts}
     {...props}
   />
 
-export default SimpleBodySelector;
+export default SimpleBodySelector

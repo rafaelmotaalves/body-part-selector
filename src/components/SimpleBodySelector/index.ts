@@ -1,4 +1,4 @@
-import SimpleBodySelector, { SimpleBodySelectorProps} from "./SimpleBodySelector";
+import SimpleBodySelector, { SimpleBodySelectorProps } from './SimpleBodySelector'
 
-export type { SimpleBodySelectorProps };
-export default SimpleBodySelector;
+export type { SimpleBodySelectorProps }
+export default SimpleBodySelector
